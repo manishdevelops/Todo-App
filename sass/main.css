@@ -1,1 +1,31 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.Todo .Todo__header {
+  background-image: url("/assets/images/bg-mobile-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 35vh;
+}
+.Todo .Todo__container {
+  position: relative;
+  top: -11rem;
+}
+.Todo .Todo__container .Todo__head {
+  display: flex;
+  justify-content: space-between;
+  justify-content: baseline;
+}
+.Todo .Todo__container .Todo__head .Todo-logo {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-size: 2rem;
+  font-weight: 700;
+}/*# sourceMappingURL=main.css.map */
