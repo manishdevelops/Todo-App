@@ -8,7 +8,10 @@
 }
 
 .Todo {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
     .Todo__header {
 
       background-image: url('/assets/images/bg-mobile-dark.jpg');
@@ -21,6 +24,7 @@
     .Todo__container {
       position: relative;       
       top: -11rem;
+      width:min(500px,85%);
 
       .Todo__head {
         display: flex;
