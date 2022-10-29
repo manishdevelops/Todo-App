@@ -16,7 +16,8 @@
   background-repeat: no-repeat;
   background-size: min(100%, 608px) 300px;
   width: 100%;
-  height: 240px;
+  min-height: 240px;
+  height: 38vh;
 }
 .Todo .Todo__container {
   position: relative;
