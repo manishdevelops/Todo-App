@@ -4,6 +4,24 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(235deg, 24%, 19%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .Todo {
@@ -16,12 +34,11 @@
   background-repeat: no-repeat;
   background-size: min(100%, 608px) 300px;
   width: 100%;
-  min-height: 240px;
-  height: 38vh;
+  height: 250px;
 }
 .Todo .Todo__container {
   position: relative;
-  top: -10.5rem;
+  top: -11rem;
   width: min(500px, 85%);
 }
 .Todo .Todo__container .Todo__head {
@@ -41,7 +58,7 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
-  margin-top: 2rem;
+  margin: 2rem 0 1.5rem 0;
   width: 100%;
   padding: 0.3rem 1.2rem;
   background-color: hsl(235deg, 24%, 19%);
@@ -60,14 +77,65 @@
   outline: none;
   border: none;
   background-color: hsl(235deg, 24%, 19%);
-  caret-color: rgb(100, 5, 70);
+  caret-color: white;
+  color: hsl(234deg, 39%, 85%);
 }
-.Todo .Todo__container .Todo__text ::-moz-placeholder {
+.Todo .Todo__container .Todo__text #TodoTextInput ::-moz-placeholder {
   color: hsl(234deg, 11%, 52%);
 }
-.Todo .Todo__container .Todo__text :-ms-input-placeholder {
+.Todo .Todo__container .Todo__text #TodoTextInput :-ms-input-placeholder {
   color: hsl(234deg, 11%, 52%);
 }
-.Todo .Todo__container .Todo__text ::placeholder {
+.Todo .Todo__container .Todo__text #TodoTextInput ::placeholder {
   color: hsl(234deg, 11%, 52%);
+}
+.Todo .Todo__container .Todo-container__overflow {
+  border-radius: 5px;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-task__container {
+  overflow: scroll;
+  height: 60vh;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont {
+  background-color: hsl(235deg, 24%, 19%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem 1rem;
+  border-bottom: 1px solid hsl(237deg, 14%, 26%);
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont:hover .cross-logo, .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont:active .cross-logo {
+  display: block !important;
+  cursor: pointer;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont {
+  display: flex;
+  align-items: center;
+  flex-basis: 80%;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont {
+  width: 27px;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont {
+  flex-basis: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid hsl(237deg, 14%, 26%);
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .Todo-task {
+  padding: 0.8rem 0 0.8rem 1.1rem;
+  font-size: 1rem;
+  color: hsl(234deg, 39%, 85%);
+  width: clamp(187px, 56vw, 387px);
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .cross-logo-cont {
+  width: 25px;
+  flex-basis: 25px;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .cross-logo-cont .cross-logo {
+  text-align: end;
+  display: none;
 }/*# sourceMappingURL=main.css.map */

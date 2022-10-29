@@ -8,6 +8,22 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Josefin Sans', sans-serif;
+  overflow: hidden;
+}
+::-webkit-scrollbar {
+  width: 5px;   // for vertical scroll bar
+  height: 0px;  // for horizontal scroll bar
+}
+::-webkit-scrollbar-track {
+  // background: #f1f1f1; 
+  background-color: var.$Very-Dark-Desaturated-Blue;
+
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 .Todo {
@@ -21,13 +37,12 @@
       background-repeat: no-repeat;
       background-size: min(100%, 608px) 300px;
       width: 100%;
-      min-height: 240px;
-      height: 38vh;
-      
+      height: 250px;
     }
+   
     .Todo__container {
       position: relative;       
-      top: -10.5rem;
+      top: -11rem;
       width:min(500px,85%);
 
       .Todo__head {
@@ -49,7 +64,7 @@
         justify-content: space-between;
         align-items: center;
         border-radius: 5px;
-        margin-top: 2rem;
+        margin: 2rem 0 1.5rem 0;
         width: 100%;
         padding: .3rem 1.2rem;
         background-color: var.$Very-Dark-Desaturated-Blue;
@@ -69,12 +84,77 @@
           outline: none;
           border: none;
           background-color: var.$Very-Dark-Desaturated-Blue;
-          caret-color: rgb(100, 5, 70);
+          caret-color: white;
+          color:var.$Light-Grayish-Blue;
+          ::placeholder {
+            color: var.$Dark-Grayish-Blue;
+          }
         }
-        ::placeholder {
-          color: var.$Dark-Grayish-Blue;
-        }
+      
       }
+      .Todo-container__overflow {
+        // height: 60vh;
+        // overflow: scroll;
+        border-radius:5px ;
+        // scrollbar-width: thin;
+       
+
+        .Todo-task__container {
+          overflow: scroll;
+          height: 60vh;
+          
+          .Todo-list-cont {
+            background-color: var.$Very-Dark-Desaturated-Blue;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: .3rem 1rem;
+            border-bottom:1px solid var.$Very-Dark-Grayish-Blue2;
+            cursor: grab;
+          
+              &:hover,&:active{
+                .cross-logo {
+                display: block !important;
+                cursor: pointer;
+            }
+            }
+            
+            .Todo-list-sub-cont {
+              display: flex;
+              align-items: center;
+              flex-basis: 80%;
+              .cont {
+                width: 27px;
+                .check-logo-cont {
+                  flex-basis: 20px;
+                  width: 20px;
+                  height: 20px;
+                  border-radius: 50%;
+                  border: 1px solid var.$Very-Dark-Grayish-Blue2;
+                }
+              }
+              
+
+              .Todo-task {
+                padding: 0.8rem 0 0.8rem 1.1rem;
+                font-size: 1rem;
+                color:var.$Light-Grayish-Blue;
+                width: clamp(187px,56vw,387px);
+              }
+          }
+            .cross-logo-cont{
+              width: 25px;
+              flex-basis: 25px;
+              .cross-logo {
+                text-align: end;
+                display: none;
+              }
+            }
+          
+          }
+      }
+
+    }
 
     }
 
