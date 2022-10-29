@@ -7,6 +7,10 @@
   overflow: hidden;
 }
 
+body {
+  background-color: hsl(235deg, 21%, 11%);
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 0px;
@@ -116,20 +120,31 @@
   flex-basis: 80%;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont {
-  width: 27px;
+  width: 30px;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont {
   flex-basis: 20px;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   border: 1px solid hsl(237deg, 14%, 26%);
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  -o-border-image: linear-gradient(60deg, hsl(192deg, 100%, 67%) 10%, hsl(280deg, 87%, 65%) 100%);
+     border-image: linear-gradient(60deg, hsl(192deg, 100%, 67%) 10%, hsl(280deg, 87%, 65%) 100%);
+  border-image-slice: 1;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .Todo-task {
   padding: 0.8rem 0 0.8rem 1.1rem;
   font-size: 1rem;
   color: hsl(234deg, 39%, 85%);
   width: clamp(187px, 56vw, 387px);
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .Todo-task:hover {
+  cursor: pointer;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .cross-logo-cont {
   width: 25px;

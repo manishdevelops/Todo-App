@@ -10,6 +10,10 @@
   font-family: 'Josefin Sans', sans-serif;
   overflow: hidden;
 }
+body{
+  background-color: var.$Very-Dark-Blue;
+
+}
 ::-webkit-scrollbar {
   width: 5px;   // for vertical scroll bar
   height: 0px;  // for horizontal scroll bar
@@ -93,11 +97,7 @@
       
       }
       .Todo-container__overflow {
-        // height: 60vh;
-        // overflow: scroll;
         border-radius:5px ;
-        // scrollbar-width: thin;
-       
 
         .Todo-task__container {
           overflow: scroll;
@@ -123,23 +123,35 @@
               display: flex;
               align-items: center;
               flex-basis: 80%;
+
               .cont {
-                width: 27px;
+                width: 30px;
+                
                 .check-logo-cont {
                   flex-basis: 20px;
-                  width: 20px;
-                  height: 20px;
+                  width: 22px;
+                  height: 22px;
                   border-radius: 50%;
                   border: 1px solid var.$Very-Dark-Grayish-Blue2;
+
+                  &:hover {
+                    cursor: pointer;
+                    border-radius: 50%;
+                    border: 3px solid transparent;
+                    border-image: linear-gradient(60deg, hsl(192, 100%, 67%) 10%, hsl(280, 87%, 65) 100%) ;
+                    border-image-slice: 1;
+                  }
                 }
               }
-              
 
               .Todo-task {
                 padding: 0.8rem 0 0.8rem 1.1rem;
                 font-size: 1rem;
                 color:var.$Light-Grayish-Blue;
                 width: clamp(187px,56vw,387px);
+                &:hover {
+                  cursor: pointer;
+                }
               }
           }
             .cross-logo-cont{
