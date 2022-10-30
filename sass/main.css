@@ -12,7 +12,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 2px;
   height: 0px;
 }
 
@@ -40,10 +40,17 @@ body {
   width: 100%;
   height: 250px;
 }
+@media (min-width: 600px) {
+  .Todo .Todo__header {
+    background-image: url("/assets/images/bg-desktop-dark.jpg");
+    background-size: cover !important;
+    height: 290px !important;
+  }
+}
 .Todo .Todo__container {
   position: relative;
   top: -11rem;
-  width: min(500px, 85%);
+  width: min(600px, 85%);
 }
 .Todo .Todo__container .Todo__head {
   display: flex;
@@ -98,14 +105,14 @@ body {
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container {
   overflow: scroll;
-  height: 60vh;
+  height: 50vh;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont {
   background-color: hsl(235deg, 24%, 19%);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.3rem 1rem;
+  padding: 0.5rem 1rem;
   border-bottom: 1px solid hsl(237deg, 14%, 26%);
   cursor: -webkit-grab;
   cursor: grab;
@@ -141,7 +148,7 @@ body {
   padding: 0.8rem 0 0.8rem 1.1rem;
   font-size: 1rem;
   color: hsl(234deg, 39%, 85%);
-  width: clamp(187px, 56vw, 387px);
+  width: clamp(187px, 66vw, 387px);
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .Todo-task:hover {
   cursor: pointer;
@@ -153,4 +160,61 @@ body {
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .cross-logo-cont .cross-logo {
   text-align: end;
   display: none;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1rem;
+  font-size: 0.8rem;
+  background-color: hsl(235deg, 24%, 19%);
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-info .total-items-left {
+  color: hsl(233deg, 14%, 35%);
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-info .clear-item {
+  color: hsl(233deg, 14%, 35%);
+}
+@media (min-width: 600px) {
+  .Todo .Todo__container .Todo-container__overflow .Todo-info {
+    display: none;
+  }
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-status-container {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 1rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  justify-content: center;
+  background-color: hsl(235deg, 24%, 19%);
+  color: hsl(233deg, 14%, 35%);
+}
+@media (min-width: 600px) {
+  .Todo .Todo__container .Todo-container__overflow .Todo-status-container {
+    justify-content: space-between !important;
+  }
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-status-container .Todo-status {
+  display: flex;
+  justify-content: space-evenly;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-status-container .Todo-status .Active-status {
+  margin: 0 1rem;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-status-container .total-items-left {
+  display: none;
+}
+@media (min-width: 600px) {
+  .Todo .Todo__container .Todo-container__overflow .Todo-status-container .total-items-left {
+    display: block !important;
+  }
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-status-container .clear-comp-status {
+  display: none;
+}
+@media (min-width: 600px) {
+  .Todo .Todo__container .Todo-container__overflow .Todo-status-container .clear-comp-status {
+    display: block !important;
+  }
 }/*# sourceMappingURL=main.css.map */
