@@ -1,4 +1,88 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+.theme1 {
+  background-color: hsl(235deg, 21%, 11%);
+}
+.theme1 .Todo__text {
+  background-color: hsl(235deg, 24%, 19%);
+}
+.theme1 #TodoTextInput {
+  background-color: hsl(235deg, 24%, 19%);
+  color: hsl(234deg, 39%, 85%);
+}
+.theme1 .Todo-list-cont {
+  background-color: hsl(235deg, 24%, 19%);
+  border-bottom: 1px solid hsl(237deg, 14%, 26%);
+}
+.theme1 .Todo-info {
+  background-color: hsl(235deg, 24%, 19%);
+}
+.theme1 .Todo-status-container {
+  background-color: hsl(235deg, 24%, 19%);
+  color: hsl(233deg, 14%, 35%);
+}
+.theme1 .Todo-task {
+  color: hsl(234deg, 39%, 85%);
+}
+.theme1 .check-logo-cont {
+  border: 1px solid hsl(237deg, 14%, 26%) !important;
+}
+.theme1 ::-webkit-scrollbar-track {
+  background-color: hsl(235deg, 24%, 19%);
+}
+.theme1 #TodoTextInput {
+  caret-color: white !important;
+}
+.theme1 .Todo__header {
+  background-image: url("/assets/images/bg-mobile-dark.jpg");
+}
+@media (min-width: 600px) {
+  .theme1 .Todo__header {
+    background-image: url("/assets/images/bg-desktop-dark.jpg");
+  }
+}
+
+.theme2 {
+  background-color: hsl(236deg, 33%, 92%);
+}
+.theme2 .Todo__text {
+  background-color: hsl(0deg, 0%, 98%);
+}
+.theme2 #TodoTextInput {
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(235deg, 19%, 35%);
+}
+.theme2 .Todo-list-cont {
+  background-color: hsl(0deg, 0%, 98%);
+  border-bottom: 1px solid hsl(234deg, 39%, 85%);
+}
+.theme2 .Todo-info {
+  background-color: hsl(0deg, 0%, 98%);
+}
+.theme2 .Todo-status-container {
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(234deg, 11%, 52%);
+}
+.theme2 .Todo-task {
+  color: hsl(235deg, 19%, 35%);
+}
+.theme2 .check-logo-cont {
+  border: 1px solid hsl(234deg, 39%, 85%) !important;
+}
+.theme2 ::-webkit-scrollbar-track {
+  background-color: hsl(0deg, 0%, 98%);
+}
+.theme2 #TodoTextInput {
+  caret-color: black !important;
+}
+.theme2 .Todo__header {
+  background-image: url("/assets/images/bg-mobile-light.jpg");
+}
+@media (min-width: 600px) {
+  .theme2 .Todo__header {
+    background-image: url("/assets/images/bg-desktop-light.jpg");
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,16 +92,12 @@
 }
 
 body {
-  background-color: hsl(235deg, 21%, 11%);
+  transition: all 0.4s ease;
 }
 
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 1px;
   height: 0px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: hsl(235deg, 24%, 19%);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -34,7 +114,6 @@ body {
   align-items: center;
 }
 .Todo .Todo__header {
-  background-image: url("/assets/images/bg-mobile-dark.jpg");
   background-repeat: no-repeat;
   background-size: min(100%, 608px) 300px;
   width: 100%;
@@ -42,20 +121,18 @@ body {
 }
 @media (min-width: 600px) {
   .Todo .Todo__header {
-    background-image: url("/assets/images/bg-desktop-dark.jpg");
     background-size: cover !important;
     height: 290px !important;
   }
 }
 .Todo .Todo__container {
   position: relative;
-  top: -11rem;
+  top: -12rem;
   width: min(600px, 85%);
 }
 .Todo .Todo__container .Todo__head {
   display: flex;
   justify-content: space-between;
-  justify-content: baseline;
 }
 .Todo .Todo__container .Todo__head .Todo-logo {
   color: white;
@@ -63,6 +140,9 @@ body {
   letter-spacing: 8px;
   font-size: 2rem;
   font-weight: 700;
+}
+.Todo .Todo__container .Todo__head .logo {
+  all: unset;
 }
 .Todo .Todo__container .Todo__text {
   display: flex;
@@ -72,7 +152,6 @@ body {
   margin: 2rem 0 1.5rem 0;
   width: 100%;
   padding: 0.3rem 1.2rem;
-  background-color: hsl(235deg, 24%, 19%);
 }
 .Todo .Todo__container .Todo__text .check-logo-cont {
   flex-basis: 20px;
@@ -87,9 +166,6 @@ body {
   font-size: 1rem;
   outline: none;
   border: none;
-  background-color: hsl(235deg, 24%, 19%);
-  caret-color: white;
-  color: hsl(234deg, 39%, 85%);
 }
 .Todo .Todo__container .Todo__text #TodoTextInput ::-moz-placeholder {
   color: hsl(234deg, 11%, 52%);
@@ -108,14 +184,17 @@ body {
   height: 50vh;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont {
-  background-color: hsl(235deg, 24%, 19%);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid hsl(237deg, 14%, 26%);
+  padding: 0.4rem 1rem;
   cursor: -webkit-grab;
   cursor: grab;
+}
+@media (min-width: 600px) {
+  .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont {
+    padding: 0.53rem 1rem !important;
+  }
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont:hover .cross-logo, .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont:active .cross-logo {
   display: block !important;
@@ -130,11 +209,11 @@ body {
   width: 30px;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont {
+  all: unset;
   flex-basis: 20px;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  border: 1px solid hsl(237deg, 14%, 26%);
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont:hover {
   cursor: pointer;
@@ -147,13 +226,13 @@ body {
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .Todo-task {
   padding: 0.8rem 0 0.8rem 1.1rem;
   font-size: 1rem;
-  color: hsl(234deg, 39%, 85%);
   width: clamp(187px, 66vw, 387px);
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .Todo-task:hover {
   cursor: pointer;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .cross-logo-cont {
+  all: unset;
   width: 25px;
   flex-basis: 25px;
 }
@@ -167,13 +246,16 @@ body {
   justify-content: space-between;
   padding: 1.2rem 1rem;
   font-size: 0.8rem;
-  background-color: hsl(235deg, 24%, 19%);
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-info .total-items-left {
   color: hsl(233deg, 14%, 35%);
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-info .clear-item {
+  all: unset;
   color: hsl(233deg, 14%, 35%);
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-info .clear-item:hover {
+  cursor: pointer;
 }
 @media (min-width: 600px) {
   .Todo .Todo__container .Todo-container__overflow .Todo-info {
@@ -187,8 +269,6 @@ body {
   margin-top: 1rem;
   font-size: 0.8rem;
   justify-content: center;
-  background-color: hsl(235deg, 24%, 19%);
-  color: hsl(233deg, 14%, 35%);
 }
 @media (min-width: 600px) {
   .Todo .Todo__container .Todo-container__overflow .Todo-status-container {
@@ -198,9 +278,26 @@ body {
 .Todo .Todo__container .Todo-container__overflow .Todo-status-container .Todo-status {
   display: flex;
   justify-content: space-evenly;
+  font-weight: 600;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-status-container .Todo-status .All-status {
+  all: unset;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-status-container .Todo-status .All-status:hover {
+  cursor: pointer;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-status-container .Todo-status .Active-status {
+  all: unset;
   margin: 0 1rem;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-status-container .Todo-status .Active-status:hover {
+  cursor: pointer;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-status-container .Todo-status .Completed-status {
+  all: unset;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-status-container .Todo-status .Completed-status:hover {
+  cursor: pointer;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-status-container .total-items-left {
   display: none;
@@ -211,7 +308,11 @@ body {
   }
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-status-container .clear-comp-status {
+  all: unset;
   display: none;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-status-container .clear-comp-status:hover {
+  cursor: pointer;
 }
 @media (min-width: 600px) {
   .Todo .Todo__container .Todo-container__overflow .Todo-status-container .clear-comp-status {
