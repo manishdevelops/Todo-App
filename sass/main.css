@@ -23,9 +23,6 @@
 .theme1 .Todo-task {
   color: hsl(234deg, 39%, 85%);
 }
-.theme1 .check-logo-cont {
-  border: 1px solid hsl(237deg, 14%, 26%) !important;
-}
 .theme1 ::-webkit-scrollbar-track {
   background-color: hsl(235deg, 24%, 19%);
 }
@@ -64,9 +61,6 @@
 }
 .theme2 .Todo-task {
   color: hsl(235deg, 19%, 35%);
-}
-.theme2 .check-logo-cont {
-  border: 1px solid hsl(234deg, 39%, 85%) !important;
 }
 .theme2 ::-webkit-scrollbar-track {
   background-color: hsl(0deg, 0%, 98%);
@@ -117,7 +111,7 @@ body {
   background-repeat: no-repeat;
   background-size: min(100%, 608px) 300px;
   width: 100%;
-  height: 250px;
+  height: 220px;
 }
 @media (min-width: 600px) {
   .Todo .Todo__header {
@@ -127,8 +121,13 @@ body {
 }
 .Todo .Todo__container {
   position: relative;
-  top: -12rem;
+  top: -11rem;
   width: min(600px, 85%);
+}
+@media (min-width: 600px) {
+  .Todo .Todo__container {
+    top: -12rem;
+  }
 }
 .Todo .Todo__container .Todo__head {
   display: flex;
@@ -144,6 +143,9 @@ body {
 .Todo .Todo__container .Todo__head .logo {
   all: unset;
 }
+.Todo .Todo__container .Todo__head .logo .moon-logo {
+  display: none;
+}
 .Todo .Todo__container .Todo__text {
   display: flex;
   justify-content: space-between;
@@ -153,27 +155,32 @@ body {
   width: 100%;
   padding: 0.3rem 1.2rem;
 }
-.Todo .Todo__container .Todo__text .check-logo-cont {
+.Todo .Todo__container .Todo__text .check-logo-cont-top {
   flex-basis: 20px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   border: 1px solid hsl(237deg, 14%, 26%);
 }
-.Todo .Todo__container .Todo__text #TodoTextInput {
+.Todo .Todo__container .Todo__text form {
+  padding-left: 1.1rem;
+  width: 100%;
+}
+.Todo .Todo__container .Todo__text form #TodoTextInput {
   flex-basis: calc(100% - 40px);
   padding: 0.8rem 0rem;
   font-size: 1rem;
   outline: none;
   border: none;
+  width: 100%;
 }
-.Todo .Todo__container .Todo__text #TodoTextInput ::-moz-placeholder {
+.Todo .Todo__container .Todo__text form #TodoTextInput ::-moz-placeholder {
   color: hsl(234deg, 11%, 52%);
 }
-.Todo .Todo__container .Todo__text #TodoTextInput :-ms-input-placeholder {
+.Todo .Todo__container .Todo__text form #TodoTextInput :-ms-input-placeholder {
   color: hsl(234deg, 11%, 52%);
 }
-.Todo .Todo__container .Todo__text #TodoTextInput ::placeholder {
+.Todo .Todo__container .Todo__text form #TodoTextInput ::placeholder {
   color: hsl(234deg, 11%, 52%);
 }
 .Todo .Todo__container .Todo-container__overflow {
@@ -181,13 +188,20 @@ body {
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container {
   overflow: scroll;
-  height: 50vh;
+  height: 0%;
+  max-height: 47vh;
+}
+@media (min-width: 600px) {
+  .Todo .Todo__container .Todo-container__overflow .Todo-task__container {
+    height: 0% !important;
+    max-height: 50vh;
+  }
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.4rem 1rem;
+  padding: 0.3rem 1rem;
   cursor: -webkit-grab;
   cursor: grab;
 }
@@ -210,18 +224,26 @@ body {
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont {
   all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-basis: 20px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
+  border: 1px solid hsl(237deg, 14%, 26%);
+  background-image: none;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont:hover {
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 50% !important;
   border: 3px solid transparent;
   -o-border-image: linear-gradient(60deg, hsl(192deg, 100%, 67%) 10%, hsl(280deg, 87%, 65%) 100%);
      border-image: linear-gradient(60deg, hsl(192deg, 100%, 67%) 10%, hsl(280deg, 87%, 65%) 100%);
   border-image-slice: 1;
+}
+.Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont .check-logo {
+  display: none;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .Todo-task {
   padding: 0.8rem 0 0.8rem 1.1rem;
@@ -239,6 +261,11 @@ body {
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .cross-logo-cont .cross-logo {
   text-align: end;
   display: none;
+}
+@media (max-width: 992px) {
+  .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .cross-logo-cont .cross-logo {
+    display: block;
+  }
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-info {
   display: flex;
@@ -273,6 +300,7 @@ body {
 @media (min-width: 600px) {
   .Todo .Todo__container .Todo-container__overflow .Todo-status-container {
     justify-content: space-between !important;
+    margin-top: 0;
   }
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-status-container .Todo-status {
@@ -318,4 +346,23 @@ body {
   .Todo .Todo__container .Todo-container__overflow .Todo-status-container .clear-comp-status {
     display: block !important;
   }
+}
+
+.logo-toggle .sun-logo {
+  display: none;
+}
+.logo-toggle .moon-logo {
+  display: block !important;
+}
+
+.check-logo-cont-toggle {
+  background-image: linear-gradient(to right, hsl(192deg, 100%, 67%), hsl(280deg, 87%, 65%)) !important;
+}
+.check-logo-cont-toggle .check-logo {
+  display: block !important;
+}
+
+.complete {
+  text-decoration: line-through;
+  color: gray !important;
 }/*# sourceMappingURL=main.css.map */

@@ -30,9 +30,21 @@
     color:$TaskTextclr;
   }
 
-  .check-logo-cont {
-    border: 1px solid $borderClr !important;
-  }
+  // .check-logo-cont {
+  //   border: 1px solid $borderClr !important;
+    
+  //   &:hover {
+  //     cursor: pointer !important;
+  //     border-radius: 50%;
+  //     // border: 5px solid red !important;
+  //                   border-image: linear-gradient(60deg, hsl(192, 100%, 67%) 10%, hsl(280, 87%, 65) 100%) !important;
+  //                   border: 3px solid transparent;
+  //                   border-image-slice: 1;
+
+
+
+  //   }
+  // }
 
   ::-webkit-scrollbar-track {
     background-color: $taskListBg;
