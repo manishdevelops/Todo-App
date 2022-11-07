@@ -197,7 +197,7 @@ body{
         }
        
       }
-      .Todo-info {
+      .Todo-info-mob {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -304,4 +304,8 @@ body{
 .complete {
   text-decoration: line-through;
   color: gray !important;
+}
+
+.active {
+  color: var.$Bright-Blue !important;
 }

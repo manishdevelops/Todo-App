@@ -13,7 +13,7 @@
   background-color: hsl(235deg, 24%, 19%);
   border-bottom: 1px solid hsl(237deg, 14%, 26%);
 }
-.theme1 .Todo-info {
+.theme1 .Todo-info-mob {
   background-color: hsl(235deg, 24%, 19%);
 }
 .theme1 .Todo-status-container {
@@ -52,7 +52,7 @@
   background-color: hsl(0deg, 0%, 98%);
   border-bottom: 1px solid hsl(234deg, 39%, 85%);
 }
-.theme2 .Todo-info {
+.theme2 .Todo-info-mob {
   background-color: hsl(0deg, 0%, 98%);
 }
 .theme2 .Todo-status-container {
@@ -267,25 +267,25 @@ body {
     display: block;
   }
 }
-.Todo .Todo__container .Todo-container__overflow .Todo-info {
+.Todo .Todo__container .Todo-container__overflow .Todo-info-mob {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.2rem 1rem;
   font-size: 0.8rem;
 }
-.Todo .Todo__container .Todo-container__overflow .Todo-info .total-items-left {
+.Todo .Todo__container .Todo-container__overflow .Todo-info-mob .total-items-left {
   color: hsl(233deg, 14%, 35%);
 }
-.Todo .Todo__container .Todo-container__overflow .Todo-info .clear-item {
+.Todo .Todo__container .Todo-container__overflow .Todo-info-mob .clear-item {
   all: unset;
   color: hsl(233deg, 14%, 35%);
 }
-.Todo .Todo__container .Todo-container__overflow .Todo-info .clear-item:hover {
+.Todo .Todo__container .Todo-container__overflow .Todo-info-mob .clear-item:hover {
   cursor: pointer;
 }
 @media (min-width: 600px) {
-  .Todo .Todo__container .Todo-container__overflow .Todo-info {
+  .Todo .Todo__container .Todo-container__overflow .Todo-info-mob {
     display: none;
   }
 }
@@ -365,4 +365,8 @@ body {
 .complete {
   text-decoration: line-through;
   color: gray !important;
+}
+
+.active {
+  color: hsl(220deg, 98%, 61%) !important;
 }/*# sourceMappingURL=main.css.map */
