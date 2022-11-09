@@ -1,6 +1,6 @@
 @use 'variables' as var;
 
-@mixin setColors($bodyBg,$taskListBg,$inputTaskClr,$TodoStatusBg,$TaskTextclr,$borderClr) {
+@mixin setColors($bodyBg,$taskListBg,$inputTaskClr,$TodoStatusBg,$TaskTextclr,$borderClr,$hoverClr) {
   background-color: $bodyBg;
 
   .Todo__text {
@@ -24,6 +24,30 @@
   .Todo-status-container {
     background-color: $taskListBg;
     color:$TodoStatusBg;
+
+    .Todo-status {
+      button{
+        &:active {
+          color:$hoverClr !important;
+        }
+        @media (min-width:992px) {
+          &:hover {
+            color:$hoverClr !important;
+          }
+        }
+      }
+    }
+  }
+
+  .clear-item {
+    &:active {
+      color:$hoverClr !important;
+    }
+    @media (min-width:992px) {
+      &:hover {
+        color:$hoverClr !important;
+      }
+    }
   }
 
   .Todo-task {
@@ -58,7 +82,8 @@
   var.$Light-Grayish-Blue,
   var.$Very-Dark-Grayish-Blue1,
   var.$Light-Grayish-Blue,
-  var.$Very-Dark-Grayish-Blue2
+  var.$Very-Dark-Grayish-Blue2,
+  var.$Light-Grayish-Blue-hover,
   );
 
   #TodoTextInput {
@@ -84,6 +109,7 @@ var.$Very-Dark-Grayish-Blue ,
 var.$Dark-Grayish-Blue,
 var.$Very-Dark-Grayish-Blue ,
 var.$Light-Grayish-Blue ,
+var.$Very-Dark-Grayish-Blue
  );
 
  #TodoTextInput {
