@@ -53,6 +53,9 @@
     background-image: url("/assets/images/bg-desktop-dark.jpg");
   }
 }
+.theme1 .check-logo-cont, .theme1 .check-logo-cont-top {
+  border: 1px solid hsl(237deg, 14%, 26%) !important;
+}
 
 .theme2 {
   background-color: hsl(236deg, 33%, 92%);
@@ -107,6 +110,9 @@
   .theme2 .Todo__header {
     background-image: url("/assets/images/bg-desktop-light.jpg");
   }
+}
+.theme2 .check-logo-cont, .theme2 .check-logo-cont-top {
+  border: 1px solid hsl(237deg, 8%, 66%) !important;
 }
 
 * {
@@ -192,7 +198,6 @@ body {
   width: 22px;
   height: 23px;
   border-radius: 50%;
-  border: 1px solid hsl(237deg, 14%, 26%);
 }
 .Todo .Todo__container .Todo__text form {
   padding-left: 1.1rem;
@@ -263,7 +268,6 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1px solid hsl(237deg, 14%, 26%);
   background-image: none;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont:hover {
