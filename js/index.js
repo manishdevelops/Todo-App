@@ -14,7 +14,7 @@ const inputTask = document.querySelector('#TodoTextInput');
 const taskCont = document.querySelector('.Todo-task__container');
 const info = document.querySelectorAll('.Todo-status button');
 const countList = document.querySelectorAll('.total-items-left'); 
-
+const addBtnTop = document.querySelector('.check-logo-cont-top');
 const display = function() {
   if(info[0].classList.contains('active')) {
     allStatus();
@@ -23,7 +23,6 @@ const display = function() {
     }
 
   if(info[1].classList.contains('active')) {
-      // totalList();
       console.log('bb');
       const count = activeStatus();
       countList.forEach( ele => {
@@ -42,15 +41,27 @@ const display = function() {
   }
 }
 
-form.addEventListener('submit', function(e){
-  e.preventDefault();
-  // console.log(info);
-  // allStatus();
+//inserting task list in container
+const formFunction = function() {
+  const taskText = inputTask.value;
+  if(taskText.trim()) {
   addTodo();
   display();
   infoContainer.classList.remove('hideInfoContainer');
   infoContainer.classList.add('displayInfoContainer');
   infoMob.classList.remove('Todo-info-mob-toggle');
+  }
+}
+
+//add Btn
+addBtnTop.addEventListener('click', function() {
+  formFunction();
+});
+
+//on submit
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  formFunction();
 });
 
 // inserting task list 
@@ -80,6 +91,7 @@ const addTodo = function(Element) {
   taskCont.prepend(TodoList);
   storeDataLs();
 
+  //removeBtn/cross-logo
   const removeBtn = document.querySelector('.cross-logo-cont');
   removeBtn.addEventListener('click', function(){
     TodoList.remove();
@@ -87,9 +99,9 @@ const addTodo = function(Element) {
     display();
   });
 
+  //check /mark done task
   const textTodo = document.querySelector('.Todo-task');
   const checkBtn = document.querySelector('.check-logo-cont');
-  // storeDataLs();
   checkBtn.addEventListener('click', function() {
     const ele = checkBtn.closest('.check-logo-cont');
     ele.classList.toggle('check-logo-cont-toggle');
@@ -100,7 +112,6 @@ const addTodo = function(Element) {
   }
   
   inputTask.value = "";
-
 }
 
 
@@ -135,7 +146,6 @@ todoList.forEach( ele => {
   if(ele.children[0].children[1].classList.contains('complete')){
     ele.remove();
     storeDataLs();
-    completedTask();
   }
 }); 
 }
@@ -160,7 +170,6 @@ const todoList = document.querySelectorAll('.Todo-list-cont');
     if(!ele.children[0].children[1].classList.contains('complete')){
       ele.style.display = "flex";
       count++;
-      console.log('cl');
     }
     else 
       ele.style.display = "none";
@@ -171,7 +180,6 @@ const todoList = document.querySelectorAll('.Todo-list-cont');
 // displays completed task lists
 const completedTask = function() {
   let count = 0;
-  // console.log('oo');
 const todoList = document.querySelectorAll('.Todo-list-cont');
 
   todoList.forEach( ele => {
@@ -218,8 +226,9 @@ manageTodos.addEventListener('click',function(e) {
     clearComplete();
     totalList();
     infoHide();
-    completedTask();
+    allStatus();
     removeActiveClass();
+    document.querySelector('.All-status').classList.add('active');
   }
 
   else if(e.target.classList.contains('All-status')) {
@@ -256,13 +265,11 @@ const removeActiveClass = function() {
 //hide info
 const infoContainer = document.querySelector('.Todo-status-container');
 const infoMob = document.querySelector('.Todo-info-mob');
-
 const infoHide = function() {
   if(allStatus() === 0) {
     infoContainer.classList.remove('displayInfoContainer');
     infoContainer.classList.add('hideInfoContainer');
     infoMob.classList.add('Todo-info-mob-toggle');
-    console.log("yo");
   }
 }
 infoHide();

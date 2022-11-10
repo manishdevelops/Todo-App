@@ -191,17 +191,29 @@ body {
   border-radius: 5px;
   margin: 2rem 0 1.5rem 0;
   width: 100%;
-  padding: 0.3rem 1.2rem;
+  padding: 0.3rem 1rem;
 }
 .Todo .Todo__container .Todo__text .check-logo-cont-top {
-  flex-basis: 25px;
-  width: 22px;
-  height: 23px;
+  all: unset;
+  cursor: pointer;
   border-radius: 50%;
+  text-align: center;
+  flex-basis: 33px !important;
+  width: 31px !important;
+  height: 31px !important;
+}
+.Todo .Todo__container .Todo__text .check-logo-cont-top p {
+  font-size: 0.7rem;
+  background-image: linear-gradient(to right bottom, #57ddff, #c058f3) !important;
+  background-clip: text;
+  color: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
 }
 .Todo .Todo__container .Todo__text form {
-  padding-left: 1.1rem;
-  width: 100%;
+  padding-left: 1rem;
+  width: 96%;
 }
 .Todo .Todo__container .Todo__text form #TodoTextInput {
   flex-basis: calc(100% - 40px);
@@ -257,7 +269,12 @@ body {
   flex-basis: 80%;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont {
-  width: 30px;
+  width: 36px;
+}
+@media (min-width: 500px) {
+  .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont {
+    width: 31px !important;
+  }
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont {
   all: unset;
@@ -265,10 +282,16 @@ body {
   align-items: center;
   justify-content: center;
   flex-basis: 20px;
-  width: 20px;
-  height: 20px;
+  width: 23px;
+  height: 23px;
   border-radius: 50%;
   background-image: none;
+}
+@media (min-width: 500px) {
+  .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont {
+    width: 25px !important;
+    height: 25px !important;
+  }
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont:hover {
   cursor: pointer;
