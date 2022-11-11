@@ -18,12 +18,10 @@ const addBtnTop = document.querySelector('.check-logo-cont-top');
 const display = function() {
   if(info[0].classList.contains('active')) {
     allStatus();
-    totalList();
     infoHide();
     }
 
   if(info[1].classList.contains('active')) {
-      console.log('bb');
       const count = activeStatus();
       countList.forEach( ele => {
         ele.innerText = `${count} items left`;
@@ -47,6 +45,7 @@ const formFunction = function() {
   if(taskText.trim()) {
   addTodo();
   display();
+  totalTaskLeft();
   infoContainer.classList.remove('hideInfoContainer');
   infoContainer.classList.add('displayInfoContainer');
   infoMob.classList.remove('Todo-info-mob-toggle');
@@ -97,6 +96,7 @@ const addTodo = function(Element) {
     TodoList.remove();
     storeDataLs();
     display();
+    totalTaskLeft();
   });
 
   //check /mark done task
@@ -108,6 +108,7 @@ const addTodo = function(Element) {
     textTodo.classList.toggle('complete');
     storeDataLs();
     display();
+    totalTaskLeft();
    });
   }
   
@@ -123,7 +124,7 @@ const storeDataLs = function() {
       arr.push ({
         Text : Element.innerText,
         complete : Element.classList.contains('complete')
-      })
+      });
   });
   localStorage.setItem("todos",JSON.stringify(arr));
 }
@@ -152,79 +153,68 @@ todoList.forEach( ele => {
 
 // displays all tasks lists
 const allStatus = function() {
-  let count = 0;
 const todoList = document.querySelectorAll('.Todo-list-cont');
   todoList.forEach( ele => {
     ele.style.display = 'flex';
-    count++;
   });
-  return count;
 }
-// allStatus();
 
 // display active task lists
 const activeStatus = function() {
-  let count = 0;
 const todoList = document.querySelectorAll('.Todo-list-cont');
   todoList.forEach( ele => {
     if(!ele.children[0].children[1].classList.contains('complete')){
       ele.style.display = "flex";
-      count++;
     }
     else 
       ele.style.display = "none";
   });
-  return count;
 }
 
 // displays completed task lists
 const completedTask = function() {
-  let count = 0;
 const todoList = document.querySelectorAll('.Todo-list-cont');
 
   todoList.forEach( ele => {
     if(ele.children[0].children[1].classList.contains('complete')) {
       ele.style.display = "flex";
-      count++;
     }
     else {
       ele.style.display = "none";
     }
   });
-  return count;
 }
+//total tasks left
+const totalTaskLeft = function() {
+  let count = 0;
+  const countList = document.querySelectorAll('.total-items-left'); 
+  const todoList = document.querySelectorAll('.Todo-list-cont');
+  
+    todoList.forEach( ele => {
+      if(!ele.children[0].children[1].classList.contains('complete')) 
+        count++;
+    });
+    countList.forEach( ele => {
+      ele.innerText = `${count} items left`;
+    });
+}
+totalTaskLeft();
 
-//count total task lists
-
-const totalList = function(countItems) {
-const todoList = document.querySelectorAll('.Todo-list-cont');
-const countList = document.querySelectorAll('.total-items-left'); 
-let count = 0;
-if(countItems == 0 || countItems){
-  count = countItems;
-  countList.forEach( ele => {
-    ele.innerText = `${count} items left`;
-  });
+const totalTasks = function() {
+  let count = 0;
+  const todoList = document.querySelectorAll('.Todo-list-cont');
+  
+    todoList.forEach( ele => {
+        count++;
+    });
+    return count;
 }
-else {
-  todoList.forEach( ele => {
-    count++;
-  });
-  countList.forEach( ele => {
-    ele.innerText = `${count} items left`;
-  });
-}
- 
-}
-totalList();
-
 //handling footer part (all,active,completed)
 manageTodos.addEventListener('click',function(e) {
   e.preventDefault();
   storeDataLs();
   if(e.target.classList.contains('clear-item')) {
     clearComplete();
-    totalList();
     infoHide();
     allStatus();
     removeActiveClass();
@@ -235,21 +225,19 @@ manageTodos.addEventListener('click',function(e) {
     removeActiveClass();
     e.target.classList.add('active');
     allStatus();
-    totalList();
   }
 
   else if(e.target.classList.contains('Active-status')) {
     removeActiveClass();
     e.target.classList.add('active');
-    const count = activeStatus()
-    totalList(count);
+    activeStatus()
   }
 
   else if(e.target.classList.contains('Completed-status')) {
     removeActiveClass();
     e.target.classList.add('active');
-    const count = completedTask();
-    totalList(count);
+    const count = activeStatus();
+    completedTask();
   }
 
 });
@@ -266,7 +254,7 @@ const removeActiveClass = function() {
 const infoContainer = document.querySelector('.Todo-status-container');
 const infoMob = document.querySelector('.Todo-info-mob');
 const infoHide = function() {
-  if(allStatus() === 0) {
+  if(totalTasks() === 0) {
     infoContainer.classList.remove('displayInfoContainer');
     infoContainer.classList.add('hideInfoContainer');
     infoMob.classList.add('Todo-info-mob-toggle');
@@ -274,4 +262,25 @@ const infoHide = function() {
 }
 infoHide();
 
+//theme indicator (displays one time only)
+const themes = JSON.parse(localStorage.getItem("themeTimer")); 
+console.log(themes)
+if(!themes) {
+  setTimeout( function() {
+    document.querySelector('.themeIndicator').classList.add('themeIndicate');
+    themeLS();
+  },4000);
+}
+else {
+  document.querySelector('.themeIndicator').remove();
+}
+
+const themeLS = function() {
+  const arr = [];
+  arr.push({
+      key:"theme",
+      time:"sec",
+    });
+    localStorage.setItem("themeTimer",JSON.stringify(arr));
+}
 
