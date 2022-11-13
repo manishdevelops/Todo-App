@@ -470,8 +470,9 @@ body {
     color: hsl(341deg, 65%, 39%);
   }
 }
-.Todo .Todo__container .todoBaseContainer .dragDrop .codeByContainer, .Todo .Todo__container .todoBaseContainer .codeByContainer .codeByContainer {
-  font-size: 0.6rem;
+.Todo .Todo__container .todoBaseContainer .codeByContainer {
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
 .logo-toggle .sun-logo {
