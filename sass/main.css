@@ -295,7 +295,7 @@ body {
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container {
   overflow: scroll;
   height: 0%;
-  max-height: 47vh;
+  max-height: 45vh;
 }
 @media (min-width: 600px) {
   .Todo .Todo__container .Todo-container__overflow .Todo-task__container {
