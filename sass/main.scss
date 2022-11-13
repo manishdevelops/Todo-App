@@ -173,7 +173,7 @@ body{
         .Todo-task__container {
           overflow: scroll;
           height: 0%;
-          max-height: 43vh;
+          max-height: 42vh;
 
           @media (min-width:600px) {
            height: 0% !important;
@@ -351,8 +351,28 @@ body{
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      padding-block: 1rem;
+      padding-block: .8rem;
       line-height: 1.5;
+     
+       .dragDrop, .codeByContainer {
+        color:  var.$Very-Dark-Grayish-Blue1;
+        font-size: .8rem;
+       a {
+        &:active {
+          color: hsl(341, 65%, 39%);
+        }
+        @media (min-width:992px) {
+          &:hover {
+            color: hsl(341, 65%, 39%);
+          }
+        }
+       }
+
+       .codeByContainer  {
+        font-size: .6rem;
+       }
+       
+      }
     }
 
   }

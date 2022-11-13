@@ -42,13 +42,6 @@
 .theme1 ::-webkit-scrollbar-track {
   background-color: hsl(235deg, 24%, 19%);
 }
-.theme1 .dragDrop, .theme1 .codeByContainer {
-  color: hsl(233deg, 14%, 35%);
-  font-size: 0.8rem;
-}
-.theme1 .dragDrop a:hover, .theme1 .codeByContainer a:hover {
-  color: hsl(341deg, 65%, 39%);
-}
 .theme1 #TodoTextInput {
   caret-color: white !important;
 }
@@ -106,13 +99,6 @@
 }
 .theme2 ::-webkit-scrollbar-track {
   background-color: hsl(0deg, 0%, 98%);
-}
-.theme2 .dragDrop, .theme2 .codeByContainer {
-  color: hsl(234deg, 11%, 52%);
-  font-size: 0.8rem;
-}
-.theme2 .dragDrop a:hover, .theme2 .codeByContainer a:hover {
-  color: hsl(341deg, 65%, 39%);
 }
 .theme2 #TodoTextInput {
   caret-color: black !important;
@@ -296,7 +282,7 @@ body {
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container {
   overflow: scroll;
   height: 0%;
-  max-height: 43vh;
+  max-height: 42vh;
 }
 @media (min-width: 600px) {
   .Todo .Todo__container .Todo-container__overflow .Todo-task__container {
@@ -469,8 +455,23 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-block: 1rem;
+  padding-block: 0.8rem;
   line-height: 1.5;
+}
+.Todo .Todo__container .todoBaseContainer .dragDrop, .Todo .Todo__container .todoBaseContainer .codeByContainer {
+  color: hsl(233deg, 14%, 35%);
+  font-size: 0.8rem;
+}
+.Todo .Todo__container .todoBaseContainer .dragDrop a:active, .Todo .Todo__container .todoBaseContainer .codeByContainer a:active {
+  color: hsl(341deg, 65%, 39%);
+}
+@media (min-width: 992px) {
+  .Todo .Todo__container .todoBaseContainer .dragDrop a:hover, .Todo .Todo__container .todoBaseContainer .codeByContainer a:hover {
+    color: hsl(341deg, 65%, 39%);
+  }
+}
+.Todo .Todo__container .todoBaseContainer .dragDrop .codeByContainer, .Todo .Todo__container .todoBaseContainer .codeByContainer .codeByContainer {
+  font-size: 0.6rem;
 }
 
 .logo-toggle .sun-logo {

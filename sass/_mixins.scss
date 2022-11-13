@@ -74,15 +74,7 @@
     background-color: $taskListBg;
   }
 
-  .dragDrop, .codeByContainer {
-    color: $TodoStatusBg;
-    font-size: .8rem;
-   a {
-    &:hover {
-      color: hsl(341, 65%, 39%);
-    }
-   }
-  }
+  
 
 }
 
