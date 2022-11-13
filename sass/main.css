@@ -42,6 +42,13 @@
 .theme1 ::-webkit-scrollbar-track {
   background-color: hsl(235deg, 24%, 19%);
 }
+.theme1 .dragDrop, .theme1 .codeByContainer {
+  color: hsl(233deg, 14%, 35%);
+  font-size: 0.8rem;
+}
+.theme1 .dragDrop a:hover, .theme1 .codeByContainer a:hover {
+  color: hsl(341deg, 65%, 39%);
+}
 .theme1 #TodoTextInput {
   caret-color: white !important;
 }
@@ -99,6 +106,13 @@
 }
 .theme2 ::-webkit-scrollbar-track {
   background-color: hsl(0deg, 0%, 98%);
+}
+.theme2 .dragDrop, .theme2 .codeByContainer {
+  color: hsl(234deg, 11%, 52%);
+  font-size: 0.8rem;
+}
+.theme2 .dragDrop a:hover, .theme2 .codeByContainer a:hover {
+  color: hsl(341deg, 65%, 39%);
 }
 .theme2 #TodoTextInput {
   caret-color: black !important;
@@ -448,6 +462,14 @@ body {
   .Todo .Todo__container .Todo-container__overflow .Todo-status-container .clear-comp-status {
     display: block !important;
   }
+}
+.Todo .Todo__container .todoBaseContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-block: 1rem;
+  line-height: 1.5;
 }
 
 .logo-toggle .sun-logo {

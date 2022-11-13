@@ -3,10 +3,13 @@
 const toggleThemeBtn = document.querySelector('.logo');
 const Body = document.querySelector('body');
 const logo = document.querySelector('.logo');
+const btnAudio = new Audio('https://www.fesliyanstudios.com/play-mp3/641');
 
 toggleThemeBtn.addEventListener('click' ,function() {
   Body.classList.toggle('theme2');
   logo.classList.toggle('logo-toggle');
+    btnAudio.volume = .5;
+    btnAudio.play();
 });
 
 const form = document.querySelector('form');
@@ -262,9 +265,8 @@ const infoHide = function() {
 }
 infoHide();
 
-//theme indicator (displays one time only)
+//theme indicator (displays one time only in your browser)
 const themes = JSON.parse(localStorage.getItem("themeTimer")); 
-console.log(themes)
 if(!themes) {
   setTimeout( function() {
     document.querySelector('.themeIndicator').classList.add('themeIndicate');
@@ -274,7 +276,7 @@ if(!themes) {
 else {
   document.querySelector('.themeIndicator').remove();
 }
-
+//setting theme indicator hide 
 const themeLS = function() {
   const arr = [];
   arr.push({

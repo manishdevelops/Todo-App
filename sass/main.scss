@@ -12,6 +12,7 @@
 }
 body{
   transition: all 0.4s ease;;
+  // height: 100vh;
 }
 ::-webkit-scrollbar {
   width: 1px;   // for vertical scroll bar
@@ -342,8 +343,17 @@ body{
               display: block !important;
             }
           }
-      }
+        }
+      
 
+    }
+    .todoBaseContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding-block: 1rem;
+      line-height: 1.5;
     }
 
   }
