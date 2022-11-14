@@ -287,6 +287,6 @@ const themeLS = function() {
 }
 
 //drag and drop
-new Sortable(taskCont, {
-  Animation:350
-});
+// new Sortable(taskCont, {
+//   Animation:350
+// });
