@@ -3,13 +3,19 @@
 const toggleThemeBtn = document.querySelector('.logo');
 const Body = document.querySelector('body');
 const logo = document.querySelector('.logo');
-const btnAudio = new Audio('https://www.fesliyanstudios.com/play-mp3/641');
+
+//touch sounds
+const switchThemeAudio = new Audio('https://www.fesliyanstudios.com/play-mp3/641');
+const taskDoneAudio = new Audio();
+taskDoneAudio.src="/assets/sounds/mixkit-select-click-1109 AETrim1668595932780.wav";
+const removeTaskAudio = new Audio();
+removeTaskAudio.src="/assets/sounds/removeSound.mp3";
 
 toggleThemeBtn.addEventListener('click' ,function() {
   Body.classList.toggle('theme2');
   logo.classList.toggle('logo-toggle');
-    btnAudio.volume = .5;
-    btnAudio.play();
+    switchThemeAudio.volume = .5;
+    switchThemeAudio.play();
 });
 
 const form = document.querySelector('form');
@@ -100,6 +106,8 @@ const addTodo = function(Element) {
     storeDataLs();
     display();
     totalTaskLeft();
+    removeTaskAudio.volume="0.5";
+    removeTaskAudio.play();
   });
 
   //check /mark done task
@@ -112,6 +120,8 @@ const addTodo = function(Element) {
     storeDataLs();
     display();
     totalTaskLeft();
+    taskDoneAudio.volume=".5";
+    taskDoneAudio.play();
    });
   }
   
@@ -150,6 +160,8 @@ todoList.forEach( ele => {
   if(ele.children[0].children[1].classList.contains('complete')){
     ele.remove();
     storeDataLs();
+    removeTaskAudio.volume=".5";
+    removeTaskAudio.play();
   }
 }); 
 }
