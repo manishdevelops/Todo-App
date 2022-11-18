@@ -83,7 +83,7 @@ const addTodo = function(Element) {
   }
   if(taskText) {
   TodoList.innerHTML = `
-          <div draggable="true" class="Todo-list-sub-cont">
+          <div class="Todo-list-sub-cont">
             <div class="cont">
               <button class="check-logo-cont ${Element && Element.complete ? "check-logo-cont-toggle":""}">
               <img class="check-logo" src="/assets/images/icon-check.svg" alt="check-logo">
@@ -299,6 +299,6 @@ const themeLS = function() {
 }
 
 //drag and drop
-new Sortable(taskCont, {
-  Animation:350
-});
+// new Sortable(taskCont, {
+//   Animation:350
+// });

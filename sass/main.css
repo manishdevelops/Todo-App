@@ -129,7 +129,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 1px;
+  width: 2px;
   height: 0px;
 }
 
@@ -480,6 +480,15 @@ body {
 .Todo .Todo__container .todoBaseContainer .codeByContainer {
   font-size: 0.7rem;
   font-weight: 700;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
 }
 
 .logo-toggle .sun-logo {

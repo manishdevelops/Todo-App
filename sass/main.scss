@@ -15,7 +15,7 @@ body{
   height: auto;
 }
 ::-webkit-scrollbar {
-  width: 1px;   // for vertical scroll bar
+  width: 2px;   // for vertical scroll bar
   height: 0px;  // for horizontal scroll bar
 }
 
@@ -380,6 +380,8 @@ body{
   }
 
 }
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
 
 //js
 .logo-toggle {
