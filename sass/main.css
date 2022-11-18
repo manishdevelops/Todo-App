@@ -239,6 +239,7 @@ body {
 }
 .Todo .Todo__container .Todo__text .check-logo-cont-top {
   all: unset;
+  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
   border-radius: 50%;
   text-align: center;
@@ -322,6 +323,7 @@ body {
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont {
   all: unset;
+  -webkit-tap-highlight-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -358,6 +360,7 @@ body {
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .cross-logo-cont {
   all: unset;
+  -webkit-tap-highlight-color: transparent;
   width: 25px;
   flex-basis: 25px;
 }
@@ -413,12 +416,14 @@ body {
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-status-container .Todo-status .All-status {
   all: unset;
+  -webkit-tap-highlight-color: transparent;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-status-container .Todo-status .All-status:hover {
   cursor: pointer;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-status-container .Todo-status .Active-status {
   all: unset;
+  -webkit-tap-highlight-color: transparent;
   margin: 0 1rem;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-status-container .Todo-status .Active-status:hover {
@@ -426,6 +431,7 @@ body {
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-status-container .Todo-status .Completed-status {
   all: unset;
+  -webkit-tap-highlight-color: transparent;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-status-container .Todo-status .Completed-status:hover {
   cursor: pointer;
@@ -440,6 +446,7 @@ body {
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-status-container .clear-comp-status {
   all: unset;
+  -webkit-tap-highlight-color: transparent;
   display: none;
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-status-container .clear-comp-status:hover {

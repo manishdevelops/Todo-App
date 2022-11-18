@@ -125,10 +125,7 @@ body{
 
         .check-logo-cont-top {
           all: unset;
-          
-          // flex-basis: 27px;
-          // width: 26px;
-          // height: 26px;
+          -webkit-tap-highlight-color: transparent;
           cursor: pointer;
           border-radius: 50%;
           text-align: center;
@@ -209,6 +206,7 @@ body{
                 }
                 .check-logo-cont {
                   all: unset;
+                  -webkit-tap-highlight-color: transparent;
                   display: flex;
                   align-items: center;
                   justify-content: center;
@@ -247,6 +245,7 @@ body{
           }
             .cross-logo-cont{
               all: unset;
+              -webkit-tap-highlight-color: transparent;
               width: 25px;
               flex-basis: 25px;
               .cross-logo {
@@ -304,6 +303,7 @@ body{
 
           .All-status {
             all: unset;
+            -webkit-tap-highlight-color: transparent;
             &:hover {
               cursor: pointer;
             }
@@ -311,6 +311,7 @@ body{
 
           .Active-status {
             all: unset;
+            -webkit-tap-highlight-color: transparent;
             margin: 0 1rem;
             &:hover {
               cursor: pointer;
@@ -319,6 +320,7 @@ body{
 
           .Completed-status {
             all: unset;
+            -webkit-tap-highlight-color: transparent;
             &:hover {
               cursor: pointer;
             }
@@ -334,6 +336,7 @@ body{
 
          .clear-comp-status {
           all: unset;
+          -webkit-tap-highlight-color: transparent;
           display: none;
           &:hover {
             cursor: pointer;
