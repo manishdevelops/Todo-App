@@ -248,7 +248,7 @@ body{
                       cursor: pointer;
                     }
                   }
-                  
+
                   .check-logo {
                     display: none;
                   }
@@ -405,7 +405,7 @@ body{
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-//js
+//js events classes
 .logo-toggle {
   .sun-logo {
     display: none;
@@ -415,6 +415,7 @@ body{
   }
 }
 
+// check logo
 .check-logo-cont-toggle {
   background-image: var.$Check-Background !important;
 
@@ -422,15 +423,19 @@ body{
     display: block !important;
   }
 }
+
+//task complete
 .complete {
   text-decoration: line-through;
   color: gray !important;
 }
 
+//active 
 .active {
   color: var.$Bright-Blue !important;
 }
 
+// information footer
 .hideInfoContainer {
   opacity: 0;
   transition: .4s;
@@ -439,7 +444,6 @@ body{
   opacity: 1;
   transition: .4s;
 }
-
 .Todo-info-mob-toggle {
   @media (min-width:600px) {
     display: flex !important;
@@ -447,13 +451,12 @@ body{
   }
 }
 
-.themeIndicate {
+//theme indicating 
+.themeHide {
   opacity: 0 !important;
   transition: 2s all;
 }
-
-.themeF {
+.themeDisplay {
   opacity: 1 !important;
   transition: 2s all;
-
 }

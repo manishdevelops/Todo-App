@@ -548,12 +548,12 @@ body {
   }
 }
 
-.themeIndicate {
+.themeHide {
   opacity: 0 !important;
   transition: 2s all;
 }
 
-.themeF {
+.themeDisplay {
   opacity: 1 !important;
   transition: 2s all;
 }/*# sourceMappingURL=main.css.map */

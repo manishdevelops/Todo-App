@@ -286,14 +286,14 @@ const themes = JSON.parse(localStorage.getItem("themeTimer"));
 const themeIndicator = document.querySelector('.themeIndicator');
  setTimeout( function() {
  themeIndicator.style.transform = `translateX(0px)`;
- themeIndicator.classList.add('themeF');
+ themeIndicator.classList.add('themeDisplay');
 },1000);
 
 //hides after 4 sec
 if(!themes) {
   setTimeout( function() {
-    themeIndicator.classList.remove('themeF');
-    document.querySelector('.themeIndicator').classList.add('themeIndicate');
+    themeIndicator.classList.remove('themeDisplay');
+    document.querySelector('.themeIndicator').classList.add('themeHide');
     themeLS();
   },4000);
 }
