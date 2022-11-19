@@ -253,6 +253,16 @@ body {
   width: 31px !important;
   height: 31px !important;
 }
+.Todo .Todo__container .Todo__text .check-logo-cont-top:active {
+  border: 1px solid cyan !important;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .Todo .Todo__container .Todo__text .check-logo-cont-top:hover {
+    border: 1px solid cyan !important;
+    cursor: pointer;
+  }
+}
 .Todo .Todo__container .Todo__text .check-logo-cont-top p {
   font-size: 0.7rem;
   background-image: linear-gradient(to right bottom, #57ddff, #c058f3) !important;
@@ -345,13 +355,15 @@ body {
     height: 25px !important;
   }
 }
-.Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont:hover {
+.Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont:active {
+  border: 1px solid cyan !important;
   cursor: pointer;
-  border-radius: 50% !important;
-  border: 3px solid transparent;
-  -o-border-image: linear-gradient(60deg, hsl(192deg, 100%, 67%) 10%, hsl(280deg, 87%, 65%) 100%);
-     border-image: linear-gradient(60deg, hsl(192deg, 100%, 67%) 10%, hsl(280deg, 87%, 65%) 100%);
-  border-image-slice: 1;
+}
+@media (min-width: 992px) {
+  .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont:hover {
+    border: 1px solid cyan !important;
+    cursor: pointer;
+  }
 }
 .Todo .Todo__container .Todo-container__overflow .Todo-task__container .Todo-list-cont .Todo-list-sub-cont .cont .check-logo-cont .check-logo {
   display: none;
@@ -484,7 +496,7 @@ body {
   }
 }
 .Todo .Todo__container .todoBaseContainer .codeByContainer {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 

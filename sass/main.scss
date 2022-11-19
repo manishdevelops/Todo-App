@@ -61,6 +61,7 @@ body{
         font-size: .7rem;
         @media (min-width:360px) {
           transform: translateX(-30px);
+          
         }
         
         .themIndicator__1 {
@@ -140,6 +141,18 @@ body{
             height: 31px !important;
             
           // }
+          &:active {
+            border: 1px solid cyan !important;
+            cursor: pointer;
+          }
+          @media (min-width:992px) {
+            &:hover {
+              border: 1px solid cyan !important;
+              cursor: pointer;
+            }
+          }
+         
+
           p{
             font-size: .7rem;
             background-image: linear-gradient(to right bottom,#57ddff,#c058f3) !important;
@@ -222,16 +235,20 @@ body{
                   background-image: none;
                   @media (min-width:500px) {
                     width: 25px !important;
-                  height: 25px !important;
+                    height: 25px !important;
                   }
 
-                  &:hover {
+                  &:active {
+                    border: 1px solid cyan !important;
                     cursor: pointer;
-                    border-radius: 50% !important;
-                    border: 3px solid transparent;
-                    border-image: linear-gradient(60deg, hsl(192, 100%, 67%) 10%, hsl(280, 87%, 65) 100%) ;
-                    border-image-slice: 1;
                   }
+                  @media (min-width:992px) {
+                    &:hover {
+                      border: 1px solid cyan !important;
+                      cursor: pointer;
+                    }
+                  }
+                  
                   .check-logo {
                     display: none;
                   }
@@ -377,7 +394,7 @@ body{
        }
       }
       .codeByContainer  {
-        font-size: .7rem;
+        font-size: .9rem;
         font-weight: 700;
        }
     }

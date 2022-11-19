@@ -24,6 +24,7 @@ const taskCont = document.querySelector('.Todo-task__container');
 const info = document.querySelectorAll('.Todo-status button');
 const countList = document.querySelectorAll('.total-items-left'); 
 const addBtnTop = document.querySelector('.check-logo-cont-top');
+
 const display = function() {
   if(info[0].classList.contains('active')) {
     allStatus();
@@ -215,6 +216,7 @@ const totalTaskLeft = function() {
 }
 totalTaskLeft();
 
+//total tasks
 const totalTasks = function() {
   let count = 0;
   const todoList = document.querySelectorAll('.Todo-list-cont');
@@ -298,6 +300,7 @@ if(!themes) {
 else {
   document.querySelector('.themeIndicator').remove();
 }
+
 //setting theme indicator hide in Ls
 const themeLS = function() {
   const arr = [];
