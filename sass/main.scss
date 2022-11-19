@@ -26,6 +26,11 @@ body{
   background: #555; 
 }
 
+//hidden font size 0
+.heading {
+  font-size: 0;
+}
+
 .Todo {
     display: flex;
     flex-direction: column;

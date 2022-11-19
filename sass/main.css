@@ -141,6 +141,10 @@ body {
   background: #555;
 }
 
+.heading {
+  font-size: 0;
+}
+
 .Todo {
   display: flex;
   flex-direction: column;
