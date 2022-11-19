@@ -310,8 +310,3 @@ const themeLS = function() {
     });
     localStorage.setItem("themeTimer",JSON.stringify(arr));
 }
-
-// drag and drop
-// new Sortable(taskCont, {
-//   Animation:350
-// });
