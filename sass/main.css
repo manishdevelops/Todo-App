@@ -267,7 +267,7 @@ body {
     cursor: pointer;
   }
 }
-.Todo .Todo__container .Todo__text .check-logo-cont-top p {
+.Todo .Todo__container .Todo__text .check-logo-cont-top .addTask {
   font-size: 0.7rem;
   background-image: linear-gradient(to right bottom, #57ddff, #c058f3) !important;
   background-clip: text;
