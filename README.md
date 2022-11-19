@@ -1,4 +1,4 @@
-#Todo app solution
+# This is a frontend mentor Todo app solution
 
 ## Table of contents
 
@@ -49,5 +49,5 @@ Users should be able to:
 
 ## Author
 
-- LinkedIn - [@manish-mandal-83b4b6229/](https://www.linkedin.com/in/manish-mandal-83b4b6229/)
+- GitHub - [@Manish-d-art](https://github.com/Manish-d-art)
 - Twitter - [@manishmandal77](https://www.twitter.com/manishmandal77)
