@@ -166,6 +166,7 @@ body {
   width: min(600px, 85%);
 }
 .Todo .Todo__container .themeIndicator {
+  opacity: 0;
   position: absolute;
   align-self: flex-end;
   margin-right: 1.7rem;
@@ -174,6 +175,11 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 0.7rem;
+}
+@media (min-width: 360px) {
+  .Todo .Todo__container .themeIndicator {
+    transform: translateX(-30px);
+  }
 }
 .Todo .Todo__container .themeIndicator .themIndicator__1 {
   background-color: white;
@@ -531,6 +537,11 @@ body {
 }
 
 .themeIndicate {
-  opacity: 0;
+  opacity: 0 !important;
+  transition: 2s all;
+}
+
+.themeF {
+  opacity: 1 !important;
   transition: 2s all;
 }/*# sourceMappingURL=main.css.map */

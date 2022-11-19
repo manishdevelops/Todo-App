@@ -50,6 +50,7 @@ body{
       top: -11rem;
       width:min(600px,85%);
       .themeIndicator {
+        opacity:0;
         position: absolute;
         align-self: flex-end;
         margin-right: 1.7rem;
@@ -58,6 +59,10 @@ body{
         justify-content: center;
         align-items: center;
         font-size: .7rem;
+        @media (min-width:360px) {
+          transform: translateX(-30px);
+        }
+        
         .themIndicator__1 {
           background-color: white;
             transform: translatex(17.8px);
@@ -426,6 +431,12 @@ body{
 }
 
 .themeIndicate {
-  opacity: 0;
+  opacity: 0 !important;
   transition: 2s all;
+}
+
+.themeF {
+  opacity: 1 !important;
+  transition: 2s all;
+
 }

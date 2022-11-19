@@ -279,8 +279,18 @@ infoHide();
 
 //theme indicator (displays one time only in your browser)
 const themes = JSON.parse(localStorage.getItem("themeTimer")); 
+
+//displays after 1 sec
+const themeIndicator = document.querySelector('.themeIndicator');
+ setTimeout( function() {
+ themeIndicator.style.transform = `translateX(0px)`;
+ themeIndicator.classList.add('themeF');
+},1000);
+
+//hides after 4 sec
 if(!themes) {
   setTimeout( function() {
+    themeIndicator.classList.remove('themeF');
     document.querySelector('.themeIndicator').classList.add('themeIndicate');
     themeLS();
   },4000);
@@ -288,7 +298,7 @@ if(!themes) {
 else {
   document.querySelector('.themeIndicator').remove();
 }
-//setting theme indicator hide 
+//setting theme indicator hide in Ls
 const themeLS = function() {
   const arr = [];
   arr.push({
@@ -298,7 +308,7 @@ const themeLS = function() {
     localStorage.setItem("themeTimer",JSON.stringify(arr));
 }
 
-//drag and drop
+// drag and drop
 // new Sortable(taskCont, {
 //   Animation:350
 // });
