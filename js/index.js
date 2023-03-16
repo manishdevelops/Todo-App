@@ -306,7 +306,7 @@ const themeLS = function () {
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', () =>
 		navigator.serviceWorker.register(
-			new URL('../../serviceWorker', import.meta.url)
+			new URL('../serviceWorker.js', import.meta.url)
 		)
 	);
 }
