@@ -1,0 +1,29 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "Todo App",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manish-d-art/Todo-App.git"
+  },
+  "author": "Manish Mandal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manish-d-art/Todo-App/issues"
+  },
+  "homepage": "https://github.com/Manish-d-art/Todo-App#readme",
+  "dependencies": {
+    "core-js": "^3.29.1",
+    "regenerator-runtime": "^0.13.11"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.8.3",
+    "@parcel/transformer-webmanifest": "^2.8.3",
+    "parcel": "^2.8.3"
+  }
+}
